@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29403.142
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FestivalToiletsApi", "FestivalToiletsApi\FestivalToiletsApi.csproj", "{B0B110F7-3AFC-437E-BF1A-01A311F90245}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FestivalToiletsApi", "FestivalToiletsApi\FestivalToiletsApi.csproj", "{B0B110F7-3AFC-437E-BF1A-01A311F90245}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LovelandWebsite", "LovelandWebsite\LovelandWebsite.csproj", "{B09073E5-6F6A-4DD9-9665-EE31B46A0FDE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{B0B110F7-3AFC-437E-BF1A-01A311F90245}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B0B110F7-3AFC-437E-BF1A-01A311F90245}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B0B110F7-3AFC-437E-BF1A-01A311F90245}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B09073E5-6F6A-4DD9-9665-EE31B46A0FDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B09073E5-6F6A-4DD9-9665-EE31B46A0FDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B09073E5-6F6A-4DD9-9665-EE31B46A0FDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B09073E5-6F6A-4DD9-9665-EE31B46A0FDE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
