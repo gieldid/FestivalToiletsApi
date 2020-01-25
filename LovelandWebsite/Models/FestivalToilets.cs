@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
+
 using System.Threading.Tasks;
-using System.Xml.Serialization;
-using FestivalToiletsApi.Models;
+using Newtonsoft.Json;
 
 namespace LovelandWebsite.Models
 {
     public class FestivalToilets
     {
-        protected string api = "http://localhost:7502/api/toilets";
+        protected string api = "https://localhost:7502/api/toilets";
 
         public string Get() {
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(api);
@@ -27,17 +27,14 @@ namespace LovelandWebsite.Models
         }
 
 
-        public IEnumerable<Toilet> XmlToObject(string xml) {
+        public IEnumerable<Toilet> JsonToObject(string json) {
+            JsonSerializerSettings settings = new JsonSerializerSettings {
+                TypeNameHandling = TypeNameHandling.All
+            };
 
-            if (!string.IsNullOrEmpty(xml))
-            {
-                var ser = new XmlSerializer(typeof(IEnumerable<Toilet>));
 
-                var obj = (IEnumerable<Toilet>)ser.Deserialize(new StringReader(xml));
-                return obj;
-            }
-            return null;
+            var obj = JsonConvert.DeserializeObject<IEnumerable<Toilet>>(json, settings);
+            return obj;
         }
-
     }
 }

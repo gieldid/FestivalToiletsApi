@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using LovelandWebsite.Models;
-using FestivalToiletsApi.Models;
 
 namespace LovelandWebsite.Controllers
 {
@@ -25,7 +24,7 @@ namespace LovelandWebsite.Controllers
             FestivalToilets festivalToilets = new FestivalToilets();
             IndexViewModel indexViewModel = new IndexViewModel();
 
-            indexViewModel.Toilets = festivalToilets.XmlToObject(festivalToilets.Get());
+            indexViewModel.Toilets = festivalToilets.JsonToObject(festivalToilets.Get());
             
             return View(indexViewModel);
         }
