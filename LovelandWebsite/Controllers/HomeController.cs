@@ -19,14 +19,13 @@ namespace LovelandWebsite.Controllers
         }
 
         public IActionResult Index()
-
         {
-            FestivalToilets festivalToilets = new FestivalToilets();
-            IndexViewModel indexViewModel = new IndexViewModel();
+            return View();
+        }
 
-            indexViewModel.Toilets = festivalToilets.JsonToObject(festivalToilets.Get());
-            
-            return View(indexViewModel);
+        public IActionResult ToiletViewComponent() 
+        {
+            return ViewComponent("Toilet");
         }
 
         public IActionResult Privacy()

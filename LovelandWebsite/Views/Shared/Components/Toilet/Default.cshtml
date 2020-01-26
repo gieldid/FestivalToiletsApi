@@ -1,0 +1,15 @@
+﻿@model LovelandWebsite.Models.IndexViewModel;
+
+
+<div class="row toilets">
+    @foreach (var m in Model.Toilets)
+    {
+        <div class="col-xs-6 col-sm-3 placeholder">
+            <div class="circle @(m.IsOccupied ? "red" : "green")">
+            </div>
+            <h4>Toilet number: @m.Id</h4>
+            <span class="text-muted">@(m.IsOccupied ? "Occupied" : "Free")</span>
+        </div>
+
+    }
+</div>
