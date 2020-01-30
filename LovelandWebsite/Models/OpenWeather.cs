@@ -16,7 +16,8 @@ namespace LovelandWebsite.Models
 
         public string Get()
         {
-            string api = url + "&q=" + location + "&appid" + apiKey;
+            string api = url + "&q=" + location + "&appid=" + apiKey;
+
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(api);
             request.AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate;
 
