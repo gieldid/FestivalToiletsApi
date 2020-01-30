@@ -20,7 +20,9 @@ namespace LovelandWebsite.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            OpenWeather openWeather = new OpenWeather();
+            var weather = openWeather.JsonToObject(openWeather.Get()).main;
+            return View(weather);
         }
 
         public IActionResult ToiletViewComponent() 
